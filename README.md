@@ -52,6 +52,7 @@ CUDA_VISIBLE_DEVICES="0" python ./code_qa/run_siamese_test.py \
 
 #### Step 2: evaluate on CodeXGLUE - code search (WebQueryTest)
 
+<<<<<<< HEAD
 To evaluate on CodeXGLUE WebQueryTest, you can first download the test file from [CodeXGLUE](https://github.com/microsoft/CodeXGLUE) and move the file to `data` directory with the following commands.
 
 ```
@@ -60,6 +61,9 @@ cp CodeXGLUE/Text-Code/NL-code-search-WebQuery/data/test_webquery.json ./data/qa
 ```
 
 Then you can evaluate you model and submit the `--test_predictions_output` to CodeXGLUE challenge for the results on the test set.
+=======
+You can submit the `--test_predictions_output` to CodeXGLUE challenge for the results on the test set.
+>>>>>>> aa8d529ac790fc788dd7da3b5778fb6ad80ff7f0
 
 ```
 model=./model/qa_codebert

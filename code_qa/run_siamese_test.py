@@ -63,7 +63,11 @@ class InputFeaturesTrip(InputFeatures):
 
 
 def convert_examples_to_features(js, tokenizer, args):
+<<<<<<< HEAD
     label = js['label'] if js.get('label', None) else 0
+=======
+    label = js['label']
+>>>>>>> aa8d529ac790fc788dd7da3b5778fb6ad80ff7f0
 
     code = js['code']
     if args.code_type == 'code_tokens':
@@ -462,6 +466,10 @@ def main():
                         help="Linear warmup over warmup_steps.")
     parser.add_argument("--code_type", default='code', type=str,
                         help='use `code` or `code_tokens` in the json file to index.')
+<<<<<<< HEAD
+=======
+w
+>>>>>>> aa8d529ac790fc788dd7da3b5778fb6ad80ff7f0
     parser.add_argument('--logging_steps', type=int, default=50,
                         help="Log every X updates steps.")
     parser.add_argument('--save_steps', type=int, default=0,
