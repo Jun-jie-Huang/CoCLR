@@ -23,7 +23,11 @@ nltk
 
 ### Vanilla Model
 
-#### Step 1: training
+#### Step 1: download the checkpoint trained on CodeSearchNet
+
+Please to the first point in [Model Checkpoint section](
+
+#### Step 2: training
 
 ```
 model=./model/qa_codebert
@@ -50,7 +54,7 @@ CUDA_VISIBLE_DEVICES="0" python ./code_qa/run_siamese_test.py \
         2>&1 | tee ./qa-train-codebert.log
 ```
 
-#### Step 2: evaluate on CodeXGLUE - code search (WebQueryTest)
+#### Step 3: evaluate on CodeXGLUE - code search (WebQueryTest)
 
 To evaluate on CodeXGLUE WebQueryTest, you can first download the test file from [CodeXGLUE](https://github.com/microsoft/CodeXGLUE) and move the file to `data` directory with the following commands.
 
@@ -83,7 +87,11 @@ CUDA_VISIBLE_DEVICES="0" python ./code_qa/run_siamese_test.py \
 
 To apply CoCLR on the task of code question answering, you can run the commands with the following steps.
 
-#### Step 1: create query-rewritten data
+#### Step 1: download the checkpoint trained on CodeSearchNet
+
+Please to the first point in [Model Checkpoint section](
+
+#### Step 2: create query-rewritten data
 
 ```
 cd data
@@ -93,7 +101,7 @@ python augment_qra.py --task qa --qra_mode switch
 cd ../
 ```
 
-#### Step 2: training
+#### Step 3: training
 
 ```
 qra=switch
@@ -121,7 +129,7 @@ CUDA_VISIBLE_DEVICES="0" python ./code_qa/run_siamese_test.py \
         2>&1 | tee ./qa-train-codebert-coclr-${qra}.log
 ```
 
-#### Step 3: evaluate on CodeXGLUE - code search (WebQueryTest)
+#### Step 4: evaluate on CodeXGLUE - code search (WebQueryTest)
 
 You can submit the `--test_predictions_output` to CodeXGLUE challenge for the results on the test set.
 
@@ -146,6 +154,12 @@ CUDA_VISIBLE_DEVICES="0" python ./code_qa/run_siamese_test.py \
 ## Code Search
 
 ### Vanilla Model
+
+#### Step 1: download the checkpoint trained on CodeSearchNet
+
+Please to the first point in [Model Checkpoint section](
+
+#### Step 2: training and evaluating
 
 To train a search model without CoCLR, you can use the following command:
 
@@ -198,7 +212,11 @@ CUDA_VISIBLE_DEVICES="0" python ./code_search/run_siamese_test.py \
 
 To apply CoCLR on the task of code search, you can run the commands with the following steps.
 
-#### Step 1: create query-rewritten data
+#### Step 1: download the checkpoint trained on CodeSearchNet
+
+Please to the first point in [Model Checkpoint section](#Model Checkpoint)
+
+#### Step 2: create query-rewritten data
 
 ```
 cd data
@@ -208,7 +226,7 @@ python augment_qra.py --task retrieval --qra_mode switch
 cd ../
 ```
 
-#### Step 2: training and evaluating
+#### Step 3: training and evaluating
 
 ```
 qra=switch
@@ -278,13 +296,15 @@ CUDA_VISIBLE_DEVICES="0" python ./code_search/run_siamese_test.py \
 
 ## Model Checkpoint
 
-The checkpoint with best code question answering results can be downloaded through [this link](https://drive.google.com/drive/folders/1VjZOEI_N25R_30ZL2hYNaY-43FfpQ_MD?usp=sharing) and move to `./model/`
+1. The checkpoint trained on CodeSearchNet can be downloaded through [this link](https://drive.google.com/drive/folders/1rM5A6dPf05Q5mP9kWjfsdRIpsqfI4IBi?usp=sharing). You can first download the checkpoint. Then move it to `./model/` and rename the dirname to `codesearchnet-checkpoint`. You can also use the data in [CodeXGLUE code search (WebQueryTest)](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/NL-code-search-WebQuery/data) to train the models by your self.
 
-The checkpoint trained on CodeSearchNet can be downloaded through [this link](https://drive.google.com/drive/folders/1rM5A6dPf05Q5mP9kWjfsdRIpsqfI4IBi?usp=sharing). You can also use the data in [CodeXGLUE code search (WebQueryTest)](https://github.com/microsoft/CodeXGLUE/tree/main/Text-Code/NL-code-search-WebQuery/data) to train the models by your self.
+2. The checkpoint with best code question answering results can be downloaded through [this link](https://drive.google.com/drive/folders/1VjZOEI_N25R_30ZL2hYNaY-43FfpQ_MD?usp=sharing) and move to `./model/`.
+
+3. The checkpoint with best code search results can be downloaded through [this link](https://drive.google.com/drive/folders/1rmyqG68nmnjSFg4t8ywaSwJBCluKE4l2?usp=sharing) and move to `./model/`.
 
 ## Reference
 
-If you find this project useful, please cite it using the following format
+If you find this project useful, please cite it using the following format:
 
 ```
 @inproceedings{Huang2020CoSQA,
