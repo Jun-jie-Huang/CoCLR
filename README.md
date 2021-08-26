@@ -25,7 +25,7 @@ nltk
 
 #### Step 1: download the checkpoint trained on CodeSearchNet
 
-Please to the first point in [Model Checkpoint section](
+Please to the first point in [Model Checkpoint section](#model-checkpoint)
 
 #### Step 2: training
 
@@ -89,7 +89,7 @@ To apply CoCLR on the task of code question answering, you can run the commands 
 
 #### Step 1: download the checkpoint trained on CodeSearchNet
 
-Please to the first point in [Model Checkpoint section](
+Please to the first point in [Model Checkpoint section](#model-checkpoint)
 
 #### Step 2: create query-rewritten data
 
@@ -157,7 +157,7 @@ CUDA_VISIBLE_DEVICES="0" python ./code_qa/run_siamese_test.py \
 
 #### Step 1: download the checkpoint trained on CodeSearchNet
 
-Please to the first point in [Model Checkpoint section](
+Please to the first point in [Model Checkpoint section](#model-checkpoint)
 
 #### Step 2: training and evaluating
 
@@ -214,7 +214,7 @@ To apply CoCLR on the task of code search, you can run the commands with the fol
 
 #### Step 1: download the checkpoint trained on CodeSearchNet
 
-Please to the first point in [Model Checkpoint section](#Model Checkpoint)
+Please to the first point in [Model Checkpoint section](#model-checkpoint)
 
 #### Step 2: create query-rewritten data
 
