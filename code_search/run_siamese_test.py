@@ -661,7 +661,7 @@ def main():
     else:
         model = model_class(config)
 
-    if args.augment or not args.do_retrieval:
+    if args.augment and not args.do_retrieval:
         model = ModelContra(model, config, tokenizer, args)
     else:
         model = ModelBinary(model, config, tokenizer, args)

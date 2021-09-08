@@ -164,7 +164,7 @@ Please to the first point in [Model Checkpoint section](#model-checkpoint)
 To train a search model without CoCLR, you can use the following command:
 
 ```
-model=./model/search_codebert_${qra}
+model=./model/search_codebert
 CUDA_VISIBLE_DEVICES="0" python ./code_search/run_siamese_test.py \
 		--model_type roberta \
 		--do_train \
@@ -178,7 +178,7 @@ CUDA_VISIBLE_DEVICES="0" python ./code_search/run_siamese_test.py \
 		--max_seq_length 200 \
 		--per_gpu_train_batch_size 32 \
 		--per_gpu_retrieval_batch_size 67 \
-		--learning_rate 5e-6 \
+		--learning_rate 1e-6 \
 		--num_train_epochs 10 \
 		--gradient_accumulation_steps 1 \
 		--evaluate_during_training \
@@ -245,7 +245,7 @@ CUDA_VISIBLE_DEVICES="0" python ./code_search/run_siamese_test.py \
 		--max_seq_length 200 \
 		--per_gpu_train_batch_size 32 \
 		--per_gpu_retrieval_batch_size 67 \
-		--learning_rate 5e-6 \
+		--learning_rate 1e-6 \
 		--num_train_epochs 10 \
 		--gradient_accumulation_steps 1 \
 		--evaluate_during_training \
