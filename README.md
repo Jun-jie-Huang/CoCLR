@@ -307,19 +307,28 @@ CUDA_VISIBLE_DEVICES="0" python ./code_search/run_siamese_test.py \
 If you find this project useful, please cite it using the following format:
 
 ```
-@inproceedings{Huang2020CoSQA,
-  title={CoSQA: 20, 000+ Web Queries for Code Search and Question Answering},
-  author={Junjie Huang and Duyu Tang and Linjun Shou and Ming Gong and Ke Xu and Daxin Jiang and Ming Zhou and Nan Duan},
-  booktitle={ACL/IJCNLP},
-  year={2020}
+@inproceedings{huang2021cosqa,
+    title = "{C}o{SQA}: 20,000+ Web Queries for Code Search and Question Answering",
+    author = "Huang, Junjie  and Tang, Duyu  and Shou, Linjun  and Gong, Ming  and Xu, Ke  and Jiang, Daxin  and Zhou, Ming  and Duan, Nan",
+    booktitle = "Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.acl-long.442",
+    doi = "10.18653/v1/2021.acl-long.442",
+    pages = "5690--5700",
 }
 
-@article{Lu2021CodeXGLUE,
-  title={CodeXGLUE: A Machine Learning Benchmark Dataset for Code Understanding and Generation},
-  author={Shuai Lu and Daya Guo and Shuo Ren and Junjie Huang and Alexey Svyatkovskiy and Ambrosio Blanco and Colin Clement and Dawn Drain and Daxin Jiang and Duyu Tang and Ge Li and Lidong Zhou and Linjun Shou and Long Zhou and Michele Tufano and Ming Gong and Ming Zhou and Nan Duan and Neel Sundaresan and Shao Kun Deng and Shengyu Fu and Shujie Liu},
-  journal={ArXiv},
-  year={2021},
-  volume={abs/2102.04664}
+@inproceedings{Lu2021CodeXGLUE,
+ author = {Lu, Shuai and Guo, Daya and Ren, Shuo and Huang, Junjie and Svyatkovskiy, Alexey and Blanco, Ambrosio and Clement, Colin and Drain, Dawn and Jiang, Daxin and Tang, Duyu and Li, Ge and Zhou, Lidong and Shou, Linjun and Zhou, Long and Tufano, Michele and GONG, MING and Zhou, Ming and Duan, Nan and Sundaresan, Neel and Deng, Shao Kun and Fu, Shengyu and LIU, Shujie},
+ booktitle = {Proceedings of the Neural Information Processing Systems Track on Datasets and Benchmarks},
+ editor = {J. Vanschoren and S. Yeung},
+ pages = {},
+ title = {CodeXGLUE: A Machine Learning Benchmark Dataset for Code Understanding and Generation},
+ url = {https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/file/c16a5320fa475530d9583c34fd356ef5-Paper-round1.pdf},
+ volume = {1},
+ year = {2021}
 }
 
 ```
